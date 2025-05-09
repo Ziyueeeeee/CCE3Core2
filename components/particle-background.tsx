@@ -1,9 +1,11 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function ParticleBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const particlesRef = useRef<Particle[]>([])
+  const [particleCount, setParticleCount] = useState(0)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -75,13 +77,10 @@ export default function ParticleBackground() {
       }
     }
 
-    // Create particles
-    const particles: Particle[] = []
-    const particleCount = Math.min(100, Math.floor((window.innerWidth * window.innerHeight) / 10000))
-
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle())
-    }
+    // Create particles only after mount (client-side)
+    const count = Math.min(100, Math.floor((window.innerWidth * window.innerHeight) / 10000))
+    setParticleCount(count)
+    particlesRef.current = Array.from({ length: count }, () => new Particle())
 
     // Animation loop
     const animate = () => {
@@ -89,24 +88,24 @@ export default function ParticleBackground() {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
       // Update and draw particles
-      for (const particle of particles) {
+      for (const particle of particlesRef.current) {
         particle.update()
         particle.draw()
       }
 
       // Draw connections
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x
-          const dy = particles[i].y - particles[j].y
+      for (let i = 0; i < particlesRef.current.length; i++) {
+        for (let j = i + 1; j < particlesRef.current.length; j++) {
+          const dx = particlesRef.current[i].x - particlesRef.current[j].x
+          const dy = particlesRef.current[i].y - particlesRef.current[j].y
           const distance = Math.sqrt(dx * dx + dy * dy)
 
           if (distance < 100) {
             ctx.beginPath()
             ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 * (1 - distance / 100)})`
             ctx.lineWidth = 0.5
-            ctx.moveTo(particles[i].x, particles[i].y)
-            ctx.lineTo(particles[j].x, particles[j].y)
+            ctx.moveTo(particlesRef.current[i].x, particlesRef.current[i].y)
+            ctx.lineTo(particlesRef.current[j].x, particlesRef.current[j].y)
             ctx.stroke()
           }
         }

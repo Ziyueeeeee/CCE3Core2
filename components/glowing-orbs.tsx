@@ -1,9 +1,11 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function GlowingOrbs() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const orbsRef = useRef<Orb[]>([])
+  const [orbCount, setOrbCount] = useState(0)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -86,13 +88,10 @@ export default function GlowingOrbs() {
       }
     }
 
-    // Create orbs
-    const orbs: Orb[] = []
-    const orbCount = 5
-
-    for (let i = 0; i < orbCount; i++) {
-      orbs.push(new Orb())
-    }
+    // Create orbs only after mount (client-side)
+    const count = Math.min(12, Math.floor(window.innerWidth / 160))
+    setOrbCount(count)
+    orbsRef.current = Array.from({ length: count }, () => new Orb())
 
     // Animation loop
     const animate = () => {
@@ -100,7 +99,7 @@ export default function GlowingOrbs() {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
       // Update and draw orbs
-      for (const orb of orbs) {
+      for (const orb of orbsRef.current) {
         orb.update()
         orb.draw()
       }
