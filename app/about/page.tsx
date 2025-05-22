@@ -122,34 +122,19 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Dr. Maya Johnson",
+                name: "Aslan Chan",
                 role: "Founder & Lead Researcher",
                 bio: "AI ethics researcher with 15 years of experience in healthcare technology",
               },
               {
-                name: "Alex Rivera",
+                name: "Ziyue Zhao",
                 role: "Data Scientist",
                 bio: "Specializes in identifying bias patterns in large healthcare datasets",
               },
               {
-                name: "Dr. Sarah Chen",
-                role: "Medical Advisor",
-                bio: "Practicing physician focused on health equity and technology integration",
-              },
-              {
-                name: "Marcus Williams",
-                role: "Policy Advocate",
-                bio: "Works with legislators to develop ethical guidelines for AI in healthcare",
-              },
-              {
-                name: "Priya Patel",
-                role: "Community Outreach",
-                bio: "Connects with affected communities to document real-world impacts",
-              },
-              {
-                name: "Dr. James Wilson",
-                role: "Technical Director",
-                bio: "Develops tools to audit healthcare AI systems for bias",
+                name: "Matthew Lu",
+                role: "Research Developer",
+                bio: "Develops equitable research methods for AI in healthcare",
               },
             ].map((member, index) => (
               <motion.div

@@ -89,21 +89,25 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <StatCard
+            //https://nihcm.org/publications/artificial-intelligences-racial-bias-in-health-care
               title="Racial Disparity"
-              value="4.5x"
-              description="Black patients are 4.5x more likely to receive biased algorithmic assessments"
+              value="4.7x"
+              description="AI algorithms create 4.7x more racial disparities in pain treatment measurements than standard methods"
               icon={<Users className="h-8 w-8 text-cyan-300" />}
             />
             <StatCard
+            //https://www.unwomen.org/en/articles/explainer/artificial-intelligence-and-gender-equality
               title="Gender Bias"
-              value="68%"
-              description="of healthcare AI systems show significant gender bias in diagnosis"
+              value="44%"
+              description="of AI systems show significant gender bias at inference time"
               icon={<Brain className="h-8 w-8 text-blue-300" />}
             />
             <StatCard
+            //https://executivegov.com/2023/08/deltek-report-federal-agencies-spent-7-7b-on-ai-in-past-3-fiscal-years/ 
+            //https://www.grantexec.com/post/federal-ai-market-report-illuminating-a-multi-billion-dollar-landscape
               title="Research Gap"
-              value="$1.3B"
-              description="funding disparity in AI research for underrepresented populations"
+              value="~$7.6B"
+              description="funding disparity in AI research for equity driven initiatives"
               icon={<BarChart3 className="h-8 w-8 text-sky-300" />}
             />
           </div>

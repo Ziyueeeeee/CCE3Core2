@@ -102,7 +102,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p className="text-blue-200">contact@aibias-healthcare.org</p>
+                    <p className="text-blue-200">contact-aibias-healthcare@ucsd.edu</p>
                   </div>
                 </motion.div>
 
@@ -112,7 +112,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">Phone</h3>
-                    <p className="text-blue-200">(555) 123-4567</p>
+                    <p className="text-blue-200">(123) 456-7891</p>
                   </div>
                 </motion.div>
 
@@ -123,11 +123,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium">Address</h3>
                     <p className="text-blue-200">
-                      123 Tech Center Blvd
+                      9450 Gilman Dr
                       <br />
-                      Suite 400
-                      <br />
-                      Boston, MA 02110
+                      La Jolla, CA 92092
                     </p>
                   </div>
                 </motion.div>

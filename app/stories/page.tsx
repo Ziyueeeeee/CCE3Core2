@@ -65,7 +65,7 @@ export default function StoriesPage() {
                 date: "June 12, 2023",
                 tags: ["Diagnosis", "Racial Bias", "Primary Care"],
                 excerpt:
-                  "When I reported chest pain to my doctor, the AI diagnostic system consistently underestimated the severity of my symptoms compared to male patients with identical reports. It took three visits before a doctor overrode the AI recommendation and ordered the tests that revealed my heart condition.",
+                  "I first noticed a small, irregular mole on my medium-brown skin early this year, but the clinic’s AI-powered dermoscopy scanner flagged it as low-risk—despite systems reporting 96% sensitivity on fair skin versus 61% on darker tones—so it wasn’t biopsied until it grew and started itching, only then revealing Stage II melanoma instead of the earlier Stage I it could have been caught as.",
                 image: "/placeholder.svg?height=400&width=400",
                 avatar: "/placeholder.svg?height=100&width=100",
               },
@@ -76,7 +76,7 @@ export default function StoriesPage() {
                 date: "March 3, 2023",
                 tags: ["Pain Assessment", "Racial Bias", "Emergency Care"],
                 excerpt:
-                  "After a serious car accident, the hospital's AI pain assessment system consistently scored my pain lower than what I reported. I later learned that the system had been trained on datasets that underrepresented Black patients' pain experiences, leading to systematic undertreatment.",
+                  "After my stage III colon-cancer surgery, I hoped to join a promising immunotherapy trial, but the eligibility algorithm screened me out—reflecting a pattern where Black patients make up only 5–7% of oncology trial enrollees despite representing about 14% of U.S. cancer patients—leaving me on standard chemo and missing cutting-edge care.",
                 image: "/placeholder.svg?height=400&width=400",
                 avatar: "/placeholder.svg?height=100&width=100",
               },
@@ -87,7 +87,7 @@ export default function StoriesPage() {
                 date: "April 17, 2023",
                 tags: ["Resource Allocation", "Socioeconomic Bias", "Healthcare Access"],
                 excerpt:
-                  "As a physician, I witnessed a patient being denied specialized care because an AI resource allocation system determined they weren't a 'good candidate' based on their zip code and insurance status. The algorithm had inadvertently encoded socioeconomic bias into its decision-making process.",
+                  "At our hospital, an AI tool prioritized CT lung-cancer screening for suburban branches—where it predicted 80% scan completion rate versus 45% in our urban clinic—so lower-income, predominantly non-White patients were not prioritized, causing early-stage detection to rise 15% in the suburbs while stagnating in the city.",
                 image: "/placeholder.svg?height=400&width=400",
                 avatar: "/placeholder.svg?height=100&width=100",
               },

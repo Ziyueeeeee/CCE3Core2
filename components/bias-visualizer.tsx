@@ -5,11 +5,14 @@ import { motion } from "framer-motion"
 
 // Sample data for visualization
 const biasData = [
-  { category: "Diagnosis Accuracy", biasLevel: 42, baseline: 85 },
-  { category: "Treatment Recommendations", biasLevel: 38, baseline: 90 },
-  { category: "Pain Assessment", biasLevel: 56, baseline: 82 },
-  { category: "Resource Allocation", biasLevel: 47, baseline: 88 },
-  { category: "Clinical Trial Selection", biasLevel: 61, baseline: 79 },
+  //https://arxiv.org/abs/2004.13515
+  { category: "Diagnosis Accuracy for Retinal Disease", biasLevel: 60.5, baseline: 73 },
+  //https://www.kidneynews.org/view/journals/kidney-news/13/1/article-p1_1.xml
+  { category: "Treatment Recommendations for Kidney Disease", biasLevel: 14.9, baseline: 18.4 },
+  //https://pubmed.ncbi.nlm.nih.gov/31649194/
+  { category: "Resource Allocation for Extra Care", biasLevel: 17.7, baseline: 46.5 },
+  //https://www.cancer.gov/news-events/cancer-currents-blog/2024/black-patients-beliefs-clinical-medical-research
+  { category: "Clinical Trial Selection for Black Americans vs Population Makeup", biasLevel: 6, baseline: 14 },
 ]
 
 export default function BiasVisualizer() {
